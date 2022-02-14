@@ -1,0 +1,36 @@
+*{
+ box-sizing: border-box;
+}
+body{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container {
+    display: grid;
+    grid-template:
+      "header header header header header" 48px
+      ". user-info feed resources ." 1fr /
+      1fr 1fr 2fr 1fr 1fr;
+  }
+  
+  .header {
+    grid-area: header;
+  }
+  .asidedx {
+    grid-area: user-info;
+  }
+  
+  .asidesx{
+    grid-area: feed;
+  }
+  
+.main {
+    grid-area: resources;
+  }
+  body > * {
+    padding: 16px;
+    margin: 8px;
+ 
+    border: 2px dashed violet;
+ 
+    background-color: white;
+  }
