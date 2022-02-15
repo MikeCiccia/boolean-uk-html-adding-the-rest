@@ -1,36 +1,30 @@
 *{
- box-sizing: border-box;
+  box-sizing: border-box;
 }
-body{
-font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.header{
+  grid-area: header;
+  border: solid ;
 }
-.container {
-    display: grid;
-    grid-template:
-      "header header header header header" 48px
-      ". user-info feed resources ." 1fr /
-      1fr 1fr 2fr 1fr 1fr;
-  }
-  
-  .header {
-    grid-area: header;
-  }
-  .asidedx {
-    grid-area: user-info;
-  }
-  
-  .asidesx{
+.box {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 4px;
+  border: 2px dotted lightcoral;
+}
+.side{
+  grid-area: side;}
+ .feed{
     grid-area: feed;
-  }
-  
-.main {
-    grid-area: resources;
-  }
-  body > * {
-    padding: 16px;
-    margin: 8px;
- 
-    border: 2px dashed violet;
- 
-    background-color: white;
-  }
+}
+.sidedx{
+grid-area: sidedx;
+}
+.main{
+  display: grid;
+  grid-template: 
+   "side feed sidedx"  1fr/
+  200px 1fr 200px;
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
